@@ -5,6 +5,11 @@ import youtube from '../api/youtube'
 import VideoDetail from '../components/VideoDetail';
 class App extends React.Component {
     state = { videos: [], selectedVideo: null };
+
+    componentDidMount () {
+        this.onTermSubmit("Buildings");
+    }
+
     onTermSubmit = async (term) => {
         const response = await youtube.get('/search', {
             params: {
