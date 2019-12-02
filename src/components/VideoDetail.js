@@ -5,7 +5,12 @@ const VideoDetail = ({ video }) => {
         return <div>Loading...</div>;
     }
     return (
-        <div>{video.snippet.title}</div>
+        <div>
+            <div className="ui segment">
+                <h4 className="ui header">{video.snippet.title}</h4>
+            <p>{video.snippet.description}</p>
+            </div>
+        </div>
     );
 };
 
