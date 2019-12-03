@@ -1,12 +1,11 @@
 import axios from 'axios';
-
-const KEY = "AIzaSyBP3huzDIh-eYPaDPLrcxu5SUauz2J0ODQ"; //Acces Token Key
+import config from './config';
 
 export default axios.create({
     baseURL: "https://www.googleapis.com/youtube/v3",
     params: {
         part: "snippet",
         maxResults: 5,
-        key: KEY
+        key: config.key
     }
 });
